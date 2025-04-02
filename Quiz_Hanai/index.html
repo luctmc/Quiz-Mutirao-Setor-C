@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>QUIZ - Mutirão Setor C 2025</title>
+  <!-- Ajuste de viewport para celulares -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Vincular o CSS externo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Logo -->
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo do Mutirão Setor C 2025" class="logo">
+    </div>
+
+    <!-- TELA INICIAL -->
+    <div class="start-screen active" id="start-screen">
+      <h1>QUIZ - Mutirão Setor C 2025</h1>
+      <h2>PARTILHA</h2>
+      <p>Insira seu nome:</p>
+      <label>
+        <input type="text" id="playerName" placeholder="Digite seu nome..." />
+      </label>
+      <p>Insira o número da sua equipe:</p>
+      <label>
+        <input type="text" id="teamName" placeholder="Digite o número da sua equipe..." />
+      </label>
+
+      <!-- Container para botão e aviso LGPD lado a lado ou empilhados (mobile) -->
+      <div class="start-btn-container">
+        <button id="startBtn">Iniciar Quiz</button>
+        <span class="lgpd-info">
+          Este QUIZ tem finalidade exclusivamente pedagógica, 
+          sem coleta ou armazenamento de dados pessoais, 
+          em conformidade com a LGPD.
+        </span>
+      </div>
+    </div>
+
+    <!-- TELA DO QUIZ -->
+    <div class="quiz-screen" id="quiz-screen">
+      <h2 id="playerGreeting"></h2>
+      <div class="timer">Tempo restante: <span id="timeCount">30</span>s</div>
+      <div class="timer-bar">
+        <div class="timer-bar-fill" id="timerBar"></div>
+      </div>
+      <div id="question-container"></div>
+      <button id="nextBtn">Próxima</button>
+    </div>
+
+    <!-- TELA DE RESULTADO -->
+    <div class="result-screen" id="result-screen">
+      <h2>Resultado</h2>
+      <p id="resultText"></p>
+      <div class="correct-answers">
+        <h3>Gabarito:</h3>
+        <p id="participantInfo"></p>
+        <ul id="answerList"></ul>
+      </div>
+      <button onclick="location.reload()">Refazer Quiz</button>
+    </div>
+
+  </div>
+  <!-- Vincular o JavaScript externo -->
+  <script src="script.js"></script>
+</body>
+</html>
